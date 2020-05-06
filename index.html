@@ -5,29 +5,80 @@
             Javascript Project
         </title>
         <link href="style/style.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap&family=Comfortaa:wght@500&display=swap&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap&family=Comfortaa:wght@500&display=swap&family=Roboto:wght@300&display=swap&family=Bellota+Text:wght@300&display=swap&family=Poiret+One&display=swap" rel="stylesheet">
         <script src="script/script.js"></script>
     </head>
 
     <body>
-        <div class="upper-nav-bar">
-            <a class="upper-nav-header" href="#">portrait</a>
-        </div>
-
-        <nav class="nav-bar">
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#gallery">Gallery</a>
-            <a class="nav-link" href="#">Cart</a>
-            <a class="nav-signup" href="#">Sign Up</a>
-        </nav>
-
-        <!-- <div class="model">
-            <span class="close">&times;</span>
-            <div class="cred-container">
+        <!-----------------------------------Header---------------------------------->
+        <header>
+            <div class="upper-nav-bar">
+                <a class="upper-nav-header" href="#">portrait</a>
             </div>
-        </div> -->
+    
+            <nav class="nav-bar">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#gallery">Gallery</a>
+                <a class="nav-link" href="#">Cart</a>
+                <a class="nav-signup" href="#">Sign In</a>
+            </nav>
+        </header>
+        <!--------------------------------------------------------------------------->
 
+        <!-----------------------------------SignUp---------------------------------->
+        <div class="model" id="cred-model">
+            <span class="close" id="cred-close">&times;</span>
+            <div class="cred-container">
+                <div class="login-slider">
+                    <h3 class="login-link">Sign In</h3>
+                    <h3 class="signup-link">Sign Up</h3>
+                </div>
+                <div class="register-container">
+                    <div class="login-container">
+                        <div class="login-form-conainer">
+                            <h3 id="login-header">Sign in to your account</h3>
+                            <form class="login-form" action="">
+                                <input class="email" type="email" name="email" placeholder="Email Address" required/><br/>
+                                <input class="pass" type="password" name="pass" placeholder="Password" required/><br/>
+                                <!-- <div>
+                                    <input class="view-hide-pass" type="checkbox" value="Show Password">
+                                    <label for="view-hide-pass">Show Password</label><br/>
+                                </div> -->
+                                <input type="submit" class="login-btn" value="Sign In">
+                                <input type="reset" class="reset-btn" value="Reset">
+                                <!-- <button class="reset-btn">Reset</button> -->
+                            </form>
+                        </div>
+                    </div>
+                    <div class="signup-container">
+                        <h3 id="signup-header">Create your account</h3>
+                        <div class="signup-form-conainer">
+                            <form class="login-form">
+                                <input class="fname" type="text" name="fname" placeholder="First Name" required/>
+                                <input class="lname" type="text" name="lname" placeholder="Last Name" required/>
+                                <input class="email" type="email" name="email" placeholder="Email Address" required/>
+                                <!-- <input class="tel" type="tel" name="tel" placeholder="Mobile No" />
+                                <input class="gender" id="male" type="radio" name="male" value="Male">
+                                <label for="male">Male</label>
+                                <input class="gender" id="female" type="radio" name="male" value="Female" >
+                                <label for="female">Female</label>
+                                <input class="gender" id="other" type="radio" name="male" value="other" >
+                                <label for="other">Don't want to specify</label> -->
+                                <input class="pass" type="password" name="pass" placeholder="Password" required/>
+                                <input class="repass" type="password" name="repass" placeholder="Confirm Password" required/>
+                                <!-- <input class="view-hide-pass" type="checkbox" value="Show Password">
+                                <label for="view-hide-pass">Show Password</label> -->
+                                <input type="submit" class="signup-btn" value="Sign In">
+                                <input type="reset" class="reset-btn" value="Reset">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------->
 
+        <!----------------------------Search-and-dropboxes--------------------------->
         <div class="search-form-container">
             <div class="search-container">
                 <form class="search-form">
@@ -59,6 +110,7 @@
                 </form>
             </div>
         </div>
+        <!--------------------------------------------------------------------------->
 
         <div class="portrait-container" id="gallery">
             <div class="row">
@@ -162,8 +214,8 @@
             </div>
         </div>
 
-        <div class="model">
-            <span class="close">&times;</span>
+        <div class="model" id="img-model">
+            <span class="close" id="img-close">&times;</span>
             <div class="full-img-container">
                 <img class="full-img" src="">
             </div>
