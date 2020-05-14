@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Javascript Project
+            Portrait
         </title>
         <link href="style/style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap&family=Comfortaa:wght@500&display=swap&family=Roboto:wght@300&display=swap&family=Bellota+Text:wght@300&display=swap&family=Poiret+One&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
                     <div class="login-container">
                         <div class="login-form-conainer">
                             <h3 id="login-header">Sign in to your account</h3>
-                            <form class="login-form" action="">
+                            <form class="login-form" action="backend/php/signin.php" method="POST" target="_blank">
                                 <input class="email" type="email" name="email" placeholder="Email Address" required/><br/>
                                 <input class="pass" type="password" name="pass" placeholder="Password" required/><br/>
                                 <!-- <div>
@@ -53,7 +53,7 @@
                     <div class="signup-container">
                         <h3 id="signup-header">Create your account</h3>
                         <div class="signup-form-conainer">
-                            <form class="login-form">
+                            <form class="signup-form" action="backend/php/register.php" method="POST" target="_blank">
                                 <input class="fname" type="text" name="fname" placeholder="First Name" required/>
                                 <input class="lname" type="text" name="lname" placeholder="Last Name" required/>
                                 <input class="email" type="email" name="email" placeholder="Email Address" required/>
@@ -68,7 +68,7 @@
                                 <input class="repass" type="password" name="repass" placeholder="Confirm Password" required/>
                                 <!-- <input class="view-hide-pass" type="checkbox" value="Show Password">
                                 <label for="view-hide-pass">Show Password</label> -->
-                                <input type="submit" class="signup-btn" value="Sign In">
+                                <input type="submit" class="signup-btn" value="Sign Up">
                                 <input type="reset" class="reset-btn" value="Reset">
                             </form>
                         </div>

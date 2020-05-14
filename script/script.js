@@ -1,3 +1,36 @@
+function clearForm(form)
+{
+    var inputs = form.getElementsByTagName("input")
+    for(var i=0; i<inputs.length-2; i++)
+    {
+        inputs[i].value = "";
+    }
+}
+
+function clearForms()
+{
+    var forms = document.getElementsByTagName("form");
+    for(var i=0; i<forms.length; i++)
+    {
+        clearForm(forms[i]);
+    }
+}
+
+function validateRetypePassword()
+{
+    var pass = document.getElementsByClassName("pass")[1];
+    var repass = document.getElementsByClassName("repass")[0];
+    if(pass.value != repass.value)
+    {
+        repass.style.border = "1px solid rgb(237,85,101)";
+        event.preventDefault();
+    }
+    else
+    {
+        repass.style.border = "1px solid rgb(152, 160, 169)";
+    }
+}
+
 function switchTab(active, inactive)
 {
     var which = active.innerHTML;
@@ -39,7 +72,7 @@ function signInScreen()
 {
     var regModel = document.getElementById('cred-model');
     regModel.style.display = "block";
-    signInScreen();
+    loginSignupTab();
 }
 
 function searchImg()
@@ -83,6 +116,7 @@ function searchImg()
 
 function closeModel(model)
 {
+    clearForms();
     model.style.display = "none";
 }
 
@@ -101,7 +135,6 @@ function expandImg(e)
 
 function start()
 {
-    loginSignupTab();
     var searchBtn = document.getElementsByClassName("search-btn")[0];
     searchBtn.addEventListener("click", searchImg, false);
 
@@ -110,7 +143,10 @@ function start()
     {
         imgContaner[i].addEventListener("click", expandImg, false);
     }
+
     document.getElementsByClassName('nav-signup')[0].addEventListener('click', signInScreen, false);
+    document.getElementsByClassName('signup-btn')[0].addEventListener('click', validateRetypePassword, false);
+    
 }
 
 window.addEventListener("load", start, false);
